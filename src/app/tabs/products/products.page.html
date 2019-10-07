@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>My Product Search</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-searchbar
+        [(ngModel)]="searchTerm"
+        (ionChange)="searchChanged()"
+      ></ion-searchbar>
+      <ion-button (click)="scanCode()"
+        ><ion-icon name="barcode"></ion-icon
+      ></ion-button>
+    </ion-row>
+    <ion-list>
+      <ion-item> {{ currentProduct }} </ion-item>
+    </ion-list>
+  </ion-grid>
+</ion-content>
